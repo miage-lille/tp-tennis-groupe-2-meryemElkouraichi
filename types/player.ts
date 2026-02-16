@@ -12,3 +12,12 @@ export const stringToPlayer = (str: string): Player => {
 }
 
 export const isSamePlayer = (p1: Player, p2: Player) => p1 === p2;
+
+export const otherPlayer = (player: Player): Player => {
+  switch (player) {
+    case 'PLAYER_ONE':
+      return 'PLAYER_TWO';
+    case 'PLAYER_TWO':
+      return 'PLAYER_ONE';
+  }
+};
